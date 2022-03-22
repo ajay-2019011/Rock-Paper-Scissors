@@ -10,15 +10,43 @@
   <script src="game.js" defer></script>
 </head>
 <body>
-  <div id="inputs">
-    <button class="input" id="rock">Rock</button>
-    <button class="input" id="paper">Paper</button>
-    <button class="input" id="scissors">Scissors</button>
+  <div class="header">
+    <div class="header-1">
+        ROCK-PAPER-SCISSORS
+    </div>
+    <div class="header-2">
+      <div class="content">
+        <div class="heading">The Doom is near!!! Do something!</div>
+        <p class="p1">
+          The AI had advanced so much that now the robot have evolved more than humans and a war has begun.
+           The leader of the robots Omicron has decided to give a chance to humans to prevent war. If someone
+           can beat him at Rock-Paper-Scissors, he will set all the robots program to serve humans.
+           If not he will make all of humanity as slaves.  
+           If you want to know the rules of the game click the button below. All the best! The fate of 
+           humanity rest in your hands.
+        </p>
+        <!-- <a href="https:/.html"> -->
+        <button class="rules" onclick="window.location.href='https://www.pgpedia.com/r/rock-paper-scissors' ;">
+          Game Rules
+        </button>
+        <!-- </a> -->
+      </div>
+      <div class="img1">
+        <img src="rps.jpeg" width=470px alt="this is a place holder for an image">
+      </div>
+    </div>
   </div>
-  <p id="choice"></p>
-  <p id="score"></p>
-  <p id="winner"></p>
-  <p id="result"></p>
-  <button id="again">Start Again</button>
+  <div class="footer">
+    <div id="inputs">
+      <button class="input" id="rock">Rock</button>
+      <button class="input" id="paper">Paper</button>
+      <button class="input" id="scissors">Scissors</button>
+    </div>
+    <p id="choice"></p>
+    <p id="score"></p>
+    <p id="winner"></p>
+    <p id="result"></p>
+    <button id="again">Start Again</button>
+  </div>
 </body>
 </html>

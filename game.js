@@ -24,6 +24,7 @@ function startAgain() {
   result.textContent = "The Score:- Computer-" + computerPoints + ":: You-" + userPoints;
   score.textContent = "";
   choice.textContent = "Make Your choice!! Let's Play the Game";
+  winner.textContent = "";
 }
 
 const score = document.querySelector('#score');
@@ -58,11 +59,13 @@ function winOrLose(userselection, computerselection) {
   }
   if (userSelection == "rock") {
     if (computerSelection == "scissors") {
+      document.getElementById("score").style.color = "forestgreen";//green,limegreen
       score.textContent= "The point goes to you! Rock beats Scissors" ;
       userPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
     }
     if (computerSelection == "paper") {
+      document.getElementById("score").style.color = "firebrick"; //darkred
       score.textContent = "The point goes to the Computer! Paper beats Rock";
       computerPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
@@ -70,11 +73,13 @@ function winOrLose(userselection, computerselection) {
   }
   else if (userSelection == "paper") {
     if (computerSelection == "rock") {
+      document.getElementById("score").style.color = "forestgreen";
       score.textContent = "The point goes to you! Paper beats Rock";
       userPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
     }
     if (computerSelection == "scissors") {
+      document.getElementById("score").style.color = "firebrick";
       score.textContent = "The point goes to the Computer! Scissors beats Paper";
       computerPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
@@ -82,11 +87,13 @@ function winOrLose(userselection, computerselection) {
   }
   else if (userSelection == "scissors") {
     if (computerSelection == "paper") {
+      document.getElementById("score").style.color = "forestgreen";
       score.textContent = "The point goes to you! Scissors beats Paper";
       userPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
     }
     if (computerSelection == "rock") {
+      document.getElementById("score").style.color = "firebrick";
       score.textContent = "The point goes to the Computer! Rock beats Scissors";
       computerPoints++;
       result.textContent = "The Score:- Computer-" + computerPoints + " :: You-" + userPoints;
@@ -96,10 +103,16 @@ function winOrLose(userselection, computerselection) {
     score.textContent = "Something went wrong";
    
   if (userPoints == 5) {
-    score.textContent = "YOU WON THE GAME";
+    document.getElementById("score").style.color = "green";
+    score.textContent = "YOU WON THE GAME!!";
+    document.getElementById("winner").style.color = "forestgreen";
+    winner.textContent = "Congratulations! You have saved Humanity";
   }
   else if (computerPoints == 5) {
-    score.textContent = "COMPUTER WON THE GAME";
+    document.getElementById("score").style.color = "darkred";
+    score.textContent = "COMPUTER WON THE GAME!!";
+    document.getElementById("winner").style.color = "firebrick";
+    winner.textContent = "The Computer has given you a chance! Click on 'Start Again' to start a new match";
   }
   
 }
